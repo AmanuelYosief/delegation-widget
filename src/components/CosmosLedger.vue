@@ -8,7 +8,7 @@
         <modal name="cosmos-modal" :width="600" :draggable="true" :scrollable="true" height="auto">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Ledger Delegation ChainLayer</h5>
+                    <h5 class="modal-title">Ledger Delegation</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close" v-on:click="hide">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -186,7 +186,7 @@
                     await cdt.connect();
                 } catch(e) {
                     if (e == "Error: Unknown Status Code: undefined") {
-                        this.error = "Can't find Ledger! Please connect Ledger, enter your pin code and start Terra app. Then click connect again...";
+                        this.error = "Can't find Ledger! Please connect Ledger, enter your pin code and start Cosmos app. Then click connect again...";
                     }
                     if (e == "Error: Cosmos app does not seem to be open") {
                         this.error = "Ledger app does not seem to be open";
@@ -286,7 +286,7 @@
                     txContext,
                     this.validator,
                     this.delegation * this.baseamount,   // TODO change this
-                    'Delegation to ChainLayer.io',
+                    'Delegation Message',
                 );
 
                 this.log(this.consoleLog, "Waiting for device to sign");
@@ -350,7 +350,7 @@
                 const dummyTx = await cdt.txCreateWithdrawl(
                     txContext,
                     this.validator,
-                    'Delegation to ChainLayer.io',
+                    'Delegation Msg',
                 );
 
 

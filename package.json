@@ -1,5 +1,5 @@
 {
-  "name": "delegation-widget-iris",
+  "name": "delegation-widget-cosmos",
   "version": "1.0.0",
   "description": "Delegation widget",
   "private": true,
@@ -8,7 +8,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "author": "ChainLayer.io",
   "contributors": [
     "ZondaX GmbH"
   ],
